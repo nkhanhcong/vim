@@ -7,6 +7,9 @@ set nocompatible
 set t_Co=256
 set background=dark
 set guifont=Monospace:h20
+set wrap
+set breakindent
+set linebreak
 let g:airline_powerline_fonts = 1
 
 
@@ -22,8 +25,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set path+=**
 set wildmenu
 
-
-
+"for multiple_cursors
+highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+highlight link multiple_cursors_visual Visual
+set expandtab softtabstop=2 tabstop=2 shiftwidth=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 call vundle#begin()
 Plugin 'nerdtree'
@@ -42,6 +47,7 @@ Plugin	'auto-pairs'
 Plugin 'vim-bootstrap4-snippets'
 Plugin 'vim-airline'
 Plugin 'conoline.vim'
+Plugin 'vim-multiple-cursors'
 
 call vundle#end()
 
@@ -72,5 +78,4 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-
+set selection=inclusive
