@@ -24,6 +24,8 @@ set rtp+=~/.vim/bundle/vim-snipmate/autoload/snipMate_python_demo.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set path+=**
 set wildmenu
+set textwidth=0
+set wrapmargin=0
 
 "for multiple_cursors
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
@@ -48,7 +50,7 @@ Plugin 'vim-bootstrap4-snippets'
 Plugin 'vim-airline'
 Plugin 'conoline.vim'
 Plugin 'vim-multiple-cursors'
-
+Plugin 'vim-jst'
 call vundle#end()
 
 filetype plugin indent on
